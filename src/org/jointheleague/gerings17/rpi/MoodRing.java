@@ -9,7 +9,7 @@ import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CDevice;
 import com.pi4j.io.i2c.I2CFactory;
 
-public class MoodRingCode {
+public class MoodRing {
 
 	private I2CBus _i2cbus;
 	private I2CDevice _temperatureSensor;
@@ -20,7 +20,7 @@ public class MoodRingCode {
 	//http://www.programcreek.com/java-api-examples/index.php?source_dir=iot-server-appliances-master/WSO2Agents/wso2agents-mgt/org.wso2.carbon.device.mgt.iot.agent.kura.firealarm/org.wso2.carbon.device.mgt.iot.agent.kura.firealarm.real/src/main/java/org/wso2/carbon/device/mgt/iot/agent/kura/firealarm/impl/real/operation/AgentOperationManagerImpl.java
 
 	public static void main(String[] args) throws InterruptedException{
-		MoodRingCode mrc = new MoodRingCode();
+		MoodRing mrc = new MoodRing();
 		mrc.init();
 		float temp = mrc.get_temperatureRef();
 		for(int i=0; i<20; i++){
